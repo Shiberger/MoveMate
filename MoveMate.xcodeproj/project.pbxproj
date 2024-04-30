@@ -13,6 +13,7 @@
 		CD9740292BE10EB8006FB48C /* SampleBangkokLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9740282BE10EB8006FB48C /* SampleBangkokLocations.swift */; };
 		CD97402C2BE14C50006FB48C /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97402B2BE14C50006FB48C /* Destination.swift */; };
 		CD97402E2BE14C69006FB48C /* MTPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97402D2BE14C69006FB48C /* MTPlacemark.swift */; };
+		CD9740302BE1607E006FB48C /* DestinationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97402F2BE1607E006FB48C /* DestinationsListView.swift */; };
 		CDDB3B4D2BE0FFF9009C867B /* MoveMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDB3B4C2BE0FFF9009C867B /* MoveMateApp.swift */; };
 		CDDB3B4F2BE0FFF9009C867B /* StartTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDB3B4E2BE0FFF9009C867B /* StartTab.swift */; };
 		CDDB3B512BE0FFFB009C867B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDDB3B502BE0FFFB009C867B /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		CD9740282BE10EB8006FB48C /* SampleBangkokLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBangkokLocations.swift; sourceTree = "<group>"; };
 		CD97402B2BE14C50006FB48C /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		CD97402D2BE14C69006FB48C /* MTPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPlacemark.swift; sourceTree = "<group>"; };
+		CD97402F2BE1607E006FB48C /* DestinationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsListView.swift; sourceTree = "<group>"; };
 		CDDB3B492BE0FFF9009C867B /* MoveMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDB3B4C2BE0FFF9009C867B /* MoveMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMateApp.swift; sourceTree = "<group>"; };
 		CDDB3B4E2BE0FFF9009C867B /* StartTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTab.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				CD97401F2BE102A5006FB48C /* DestinationLocationsMapView.swift */,
+				CD97402F2BE1607E006FB48C /* DestinationsListView.swift */,
 			);
 			path = "Destination Tab";
 			sourceTree = "<group>";
@@ -67,6 +70,13 @@
 				CD97402D2BE14C69006FB48C /* MTPlacemark.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CD9740312BE164E5006FB48C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CDDB3B402BE0FFF9009C867B = {
@@ -94,6 +104,7 @@
 				CD97401E2BE10275006FB48C /* Destination Tab */,
 				CD97402A2BE14C2A006FB48C /* Models */,
 				CDDB3B502BE0FFFB009C867B /* Assets.xcassets */,
+				CD9740312BE164E5006FB48C /* Services */,
 				CDDB3B522BE0FFFB009C867B /* Preview Content */,
 				CD9740262BE10DBE006FB48C /* Launch Screen.storyboard */,
 				CD9740282BE10EB8006FB48C /* SampleBangkokLocations.swift */,
@@ -181,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD9740202BE102A5006FB48C /* DestinationLocationsMapView.swift in Sources */,
+				CD9740302BE1607E006FB48C /* DestinationsListView.swift in Sources */,
 				CDDB3B4F2BE0FFF9009C867B /* StartTab.swift in Sources */,
 				CD97402C2BE14C50006FB48C /* Destination.swift in Sources */,
 				CDDB3B4D2BE0FFF9009C867B /* MoveMateApp.swift in Sources */,

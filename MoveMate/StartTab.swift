@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct StartTab: View {
+
     var body: some View {
         TabView {
             Group {
                 MoveMateMapView()
-                    .tabItem{
-                        Label("MoveMate Map", systemImage: "map")
-                    }
-                DestinationLocationsMapView()
+                    .tabItem {
+                    Label("MoveMate Map", systemImage: "map")
+                }
+                DestinationsListView()
                     .tabItem {
                         Label("Destinations", systemImage: "globe.desk")
                     }
@@ -27,6 +28,8 @@ struct StartTab: View {
     }
 }
 
+
 #Preview {
     StartTab()
+        .modelContainer(Destination.preview)
 }
