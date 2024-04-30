@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0E372C2BE17859009169A8 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E372B2BE17859009169A8 /* LocationDetailView.swift */; };
 		CD9740202BE102A5006FB48C /* DestinationLocationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97401F2BE102A5006FB48C /* DestinationLocationsMapView.swift */; };
 		CD9740232BE10506006FB48C /* MoveMateMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9740222BE10506006FB48C /* MoveMateMapView.swift */; };
 		CD9740272BE10DBE006FB48C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9740262BE10DBE006FB48C /* Launch Screen.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0E372B2BE17859009169A8 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		CD97401F2BE102A5006FB48C /* DestinationLocationsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationsMapView.swift; sourceTree = "<group>"; };
 		CD9740222BE10506006FB48C /* MoveMateMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMateMapView.swift; sourceTree = "<group>"; };
 		CD9740262BE10DBE006FB48C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD0E372A2BE17846009169A8 /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD0E372B2BE17859009169A8 /* LocationDetailView.swift */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
 		CD97401E2BE10275006FB48C /* Destination Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,9 +116,10 @@
 				CD9740212BE104D7006FB48C /* MyMoveMate Tab */,
 				CD97401E2BE10275006FB48C /* Destination Tab */,
 				CD97402A2BE14C2A006FB48C /* Models */,
-				CDDB3B502BE0FFFB009C867B /* Assets.xcassets */,
+				CD0E372A2BE17846009169A8 /* Shared Views */,
 				CD9740312BE164E5006FB48C /* Services */,
 				CDDB3B522BE0FFFB009C867B /* Preview Content */,
+				CDDB3B502BE0FFFB009C867B /* Assets.xcassets */,
 				CD9740262BE10DBE006FB48C /* Launch Screen.storyboard */,
 				CD9740282BE10EB8006FB48C /* SampleBangkokLocations.swift */,
 			);
@@ -202,6 +213,7 @@
 				CDDB3B4D2BE0FFF9009C867B /* MoveMateApp.swift in Sources */,
 				CD97402E2BE14C69006FB48C /* MTPlacemark.swift in Sources */,
 				CD9740292BE10EB8006FB48C /* SampleBangkokLocations.swift in Sources */,
+				CD0E372C2BE17859009169A8 /* LocationDetailView.swift in Sources */,
 				CD9740232BE10506006FB48C /* MoveMateMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
