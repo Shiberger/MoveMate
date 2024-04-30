@@ -9,13 +9,21 @@ import SwiftUI
 
 struct StartTab: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, Movemate!")
+        TabView {
+            Group {
+                MoveMateMapView()
+                    .tabItem{
+                        Label("MoveMate Map", systemImage: "map")
+                    }
+                DestinationLocationsMapView()
+                    .tabItem {
+                        Label("Destinations", systemImage: "globe.desk")
+                    }
+            }
+            .toolbarBackground(.appBlue.opacity(0.8), for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarColorScheme(.dark, for: .tabBar)
         }
-        .padding()
     }
 }
 
