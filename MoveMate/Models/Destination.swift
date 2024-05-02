@@ -56,6 +56,7 @@ extension Destination {
             latitudeDelta: 0.15,
             longitudeDelta: 0.15
         )
+        
         container.mainContext.insert(bangkok)
         var placeMarks: [MTPlacemark] {
             [
@@ -66,7 +67,6 @@ extension Destination {
                 MTPlacemark(name: "Chidrom", address: "Phloen Chit Rd. Lumphini, Pathum Wan Bangkok 10330 Thailand", latitude: 13.746409, longitude: 100.530101),
                 
                 MTPlacemark(name: "Ratchadamri", address: "Rama 1 Rd. Wang Mai, Pathum Wan Bangkok 10330 Thailand", latitude: 13.746409, longitude: 100.530101),
-                
                 MTPlacemark(name: "Sala Daeng", address: "Si Lom Rd. Si Lom, Bang Rak Bangkok 10500 Thailand", latitude: 13.739401, longitude: 100.539472),
                 
                 MTPlacemark(name: "Chong Non Si", address: "Naradhiwas Rajanagarindra Rd. Si Lom, Bang Rak Bangkok 10500 Thailand", latitude: 13.724091, longitude: 100.529081),

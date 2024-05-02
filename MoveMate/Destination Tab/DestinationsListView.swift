@@ -23,7 +23,7 @@ struct DestinationsListView: View {
                             HStack {
                                 Image(systemName: "globe")
                                     .imageScale(.large)
-                                    .foregroundStyle(.appBlue)
+                                    .foregroundStyle(.accent)
                                 VStack(alignment: .leading) {
                                     Text(destination.name)
                                     Text("^[\(destination.placemarks.count) location](inflect: true)")
@@ -57,7 +57,6 @@ struct DestinationsListView: View {
                     newDestination.toggle()
                 } label: {
                     Image(systemName: "plus.circle.fill")
-                        .foregroundStyle(.appBlue)
                 }
                 .alert(
                     "Enter Destination Name",

@@ -46,7 +46,6 @@ struct DestinationLocationsMapView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(.appBlue)
             }
         }
         .padding(.horizontal)
@@ -58,7 +57,7 @@ struct DestinationLocationsMapView: View {
                             Marker(coordinate: placemark.coordinate) {
                                 Label(placemark.name, systemImage: "star")
                             }
-                            .tint(.appBlue)
+                            .tint(.yellow)
                         } else {
                             Marker(placemark.name, coordinate: placemark.coordinate)
                         }
@@ -68,7 +67,7 @@ struct DestinationLocationsMapView: View {
                                 Marker(coordinate: placemark.coordinate) {
                                     Label(placemark.name, systemImage: "star")
                                 }
-                                .tint(.orange)
+                                .tint(.yellow)
                             } else {
                                 Marker(placemark.name, coordinate: placemark.coordinate)
                             }
@@ -110,7 +109,6 @@ struct DestinationLocationsMapView: View {
                 .fontWeight(.bold)
                 .toggleStyle(.button)
                 .background(.ultraThinMaterial)
-                .tint(.appBlue)
                 .onChange(of: isManualMarker) {
                     MapManager.removeSearchResults(modelContext)
                 }
@@ -186,3 +184,4 @@ struct DestinationLocationsMapView: View {
     }
     .modelContainer(Destination.preview)
 }
+
