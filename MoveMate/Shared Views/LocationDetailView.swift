@@ -41,6 +41,7 @@ struct LocationDetailView: View {
                         .buttonStyle(.borderedProminent)
                     }
                 }
+                .autocorrectionDisabled()
                 .textFieldStyle(.roundedBorder)
                 Spacer()
                 Button {
