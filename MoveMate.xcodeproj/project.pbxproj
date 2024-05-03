@@ -7,16 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0E372C2BE17859009169A8 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0E372B2BE17859009169A8 /* LocationDetailView.swift */; };
+		CD4A6A752BE52729009398D7 /* MapStyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A6A742BE52729009398D7 /* MapStyleConfig.swift */; };
+		CD4A6A772BE5279E009398D7 /* MapStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A6A762BE5279E009398D7 /* MapStyleView.swift */; };
+		CD5A60DB2BE3A53C007CDD38 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A60DA2BE3A53C007CDD38 /* LocationManager.swift */; };
+		CD5A60DD2BE3A6BC007CDD38 /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A60DC2BE3A6BC007CDD38 /* LocationDeniedView.swift */; };
+		CD9740202BE102A5006FB48C /* DestinationLocationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97401F2BE102A5006FB48C /* DestinationLocationsMapView.swift */; };
+		CD9740232BE10506006FB48C /* MoveMateMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9740222BE10506006FB48C /* MoveMateMapView.swift */; };
+		CD9740272BE10DBE006FB48C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9740262BE10DBE006FB48C /* Launch Screen.storyboard */; };
+		CD9740292BE10EB8006FB48C /* SampleBangkokLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9740282BE10EB8006FB48C /* SampleBangkokLocations.swift */; };
+		CD97402C2BE14C50006FB48C /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97402B2BE14C50006FB48C /* Destination.swift */; };
+		CD97402E2BE14C69006FB48C /* MTPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97402D2BE14C69006FB48C /* MTPlacemark.swift */; };
+		CD9740302BE1607E006FB48C /* DestinationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97402F2BE1607E006FB48C /* DestinationsListView.swift */; };
+		CD9740332BE16554006FB48C /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9740322BE16554006FB48C /* MapManager.swift */; };
 		CDDB3B4D2BE0FFF9009C867B /* MoveMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDB3B4C2BE0FFF9009C867B /* MoveMateApp.swift */; };
-		CDDB3B4F2BE0FFF9009C867B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDB3B4E2BE0FFF9009C867B /* ContentView.swift */; };
+		CDDB3B4F2BE0FFF9009C867B /* StartTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDB3B4E2BE0FFF9009C867B /* StartTab.swift */; };
 		CDDB3B512BE0FFFB009C867B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDDB3B502BE0FFFB009C867B /* Assets.xcassets */; };
 		CDDB3B542BE0FFFB009C867B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDDB3B532BE0FFFB009C867B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0E372B2BE17859009169A8 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		CD4A6A742BE52729009398D7 /* MapStyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyleConfig.swift; sourceTree = "<group>"; };
+		CD4A6A762BE5279E009398D7 /* MapStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyleView.swift; sourceTree = "<group>"; };
+		CD5A60DA2BE3A53C007CDD38 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CD5A60DC2BE3A6BC007CDD38 /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
+		CD5A60DE2BE3AB98007CDD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD97401F2BE102A5006FB48C /* DestinationLocationsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationsMapView.swift; sourceTree = "<group>"; };
+		CD9740222BE10506006FB48C /* MoveMateMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMateMapView.swift; sourceTree = "<group>"; };
+		CD9740262BE10DBE006FB48C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CD9740282BE10EB8006FB48C /* SampleBangkokLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBangkokLocations.swift; sourceTree = "<group>"; };
+		CD97402B2BE14C50006FB48C /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		CD97402D2BE14C69006FB48C /* MTPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPlacemark.swift; sourceTree = "<group>"; };
+		CD97402F2BE1607E006FB48C /* DestinationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsListView.swift; sourceTree = "<group>"; };
+		CD9740322BE16554006FB48C /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		CDDB3B492BE0FFF9009C867B /* MoveMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDB3B4C2BE0FFF9009C867B /* MoveMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMateApp.swift; sourceTree = "<group>"; };
-		CDDB3B4E2BE0FFF9009C867B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CDDB3B4E2BE0FFF9009C867B /* StartTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTab.swift; sourceTree = "<group>"; };
 		CDDB3B502BE0FFFB009C867B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDDB3B532BE0FFFB009C867B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +59,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD0E372A2BE17846009169A8 /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD0E372B2BE17859009169A8 /* LocationDetailView.swift */,
+				CD5A60DC2BE3A6BC007CDD38 /* LocationDeniedView.swift */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		CD4A6A732BE52711009398D7 /* MapStyle */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A6A742BE52729009398D7 /* MapStyleConfig.swift */,
+				CD4A6A762BE5279E009398D7 /* MapStyleView.swift */,
+			);
+			path = MapStyle;
+			sourceTree = "<group>";
+		};
+		CD97401E2BE10275006FB48C /* Destination Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CD97401F2BE102A5006FB48C /* DestinationLocationsMapView.swift */,
+				CD97402F2BE1607E006FB48C /* DestinationsListView.swift */,
+			);
+			path = "Destination Tab";
+			sourceTree = "<group>";
+		};
+		CD9740212BE104D7006FB48C /* MyMoveMate Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A6A732BE52711009398D7 /* MapStyle */,
+				CD9740222BE10506006FB48C /* MoveMateMapView.swift */,
+			);
+			path = "MyMoveMate Tab";
+			sourceTree = "<group>";
+		};
+		CD97402A2BE14C2A006FB48C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD97402B2BE14C50006FB48C /* Destination.swift */,
+				CD97402D2BE14C69006FB48C /* MTPlacemark.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD9740312BE164E5006FB48C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD9740322BE16554006FB48C /* MapManager.swift */,
+				CD5A60DA2BE3A53C007CDD38 /* LocationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CDDB3B402BE0FFF9009C867B = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +132,18 @@
 		CDDB3B4B2BE0FFF9009C867B /* MoveMate */ = {
 			isa = PBXGroup;
 			children = (
+				CD5A60DE2BE3AB98007CDD38 /* Info.plist */,
 				CDDB3B4C2BE0FFF9009C867B /* MoveMateApp.swift */,
-				CDDB3B4E2BE0FFF9009C867B /* ContentView.swift */,
-				CDDB3B502BE0FFFB009C867B /* Assets.xcassets */,
+				CDDB3B4E2BE0FFF9009C867B /* StartTab.swift */,
+				CD9740212BE104D7006FB48C /* MyMoveMate Tab */,
+				CD97401E2BE10275006FB48C /* Destination Tab */,
+				CD97402A2BE14C2A006FB48C /* Models */,
+				CD0E372A2BE17846009169A8 /* Shared Views */,
+				CD9740312BE164E5006FB48C /* Services */,
 				CDDB3B522BE0FFFB009C867B /* Preview Content */,
+				CDDB3B502BE0FFFB009C867B /* Assets.xcassets */,
+				CD9740262BE10DBE006FB48C /* Launch Screen.storyboard */,
+				CD9740282BE10EB8006FB48C /* SampleBangkokLocations.swift */,
 			);
 			path = MoveMate;
 			sourceTree = "<group>";
@@ -125,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9740272BE10DBE006FB48C /* Launch Screen.storyboard in Resources */,
 				CDDB3B542BE0FFFB009C867B /* Preview Assets.xcassets in Resources */,
 				CDDB3B512BE0FFFB009C867B /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +227,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDDB3B4F2BE0FFF9009C867B /* ContentView.swift in Sources */,
+				CD4A6A752BE52729009398D7 /* MapStyleConfig.swift in Sources */,
+				CD5A60DD2BE3A6BC007CDD38 /* LocationDeniedView.swift in Sources */,
+				CD9740202BE102A5006FB48C /* DestinationLocationsMapView.swift in Sources */,
+				CD9740302BE1607E006FB48C /* DestinationsListView.swift in Sources */,
+				CDDB3B4F2BE0FFF9009C867B /* StartTab.swift in Sources */,
+				CD5A60DB2BE3A53C007CDD38 /* LocationManager.swift in Sources */,
+				CD97402C2BE14C50006FB48C /* Destination.swift in Sources */,
+				CD9740332BE16554006FB48C /* MapManager.swift in Sources */,
 				CDDB3B4D2BE0FFF9009C867B /* MoveMateApp.swift in Sources */,
+				CD97402E2BE14C69006FB48C /* MTPlacemark.swift in Sources */,
+				CD9740292BE10EB8006FB48C /* SampleBangkokLocations.swift in Sources */,
+				CD4A6A772BE5279E009398D7 /* MapStyleView.swift in Sources */,
+				CD0E372C2BE17859009169A8 /* LocationDetailView.swift in Sources */,
+				CD9740232BE10506006FB48C /* MoveMateMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +377,14 @@
 				DEVELOPMENT_TEAM = Y6YHXN8B7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoveMate/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know our location so you can plan your routes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +409,14 @@
 				DEVELOPMENT_TEAM = Y6YHXN8B7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoveMate/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know our location so you can plan your routes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

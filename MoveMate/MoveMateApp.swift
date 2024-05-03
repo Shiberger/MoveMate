@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct MoveMateApp: App {
+    @State private var locationManager = LocationManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if locationManager.isAuthorized {
+                StartTab()
+            } else {
+                LocationDeniedView()
+            }
         }
+        .modelContainer(for: Destination.self)
+        .environment(locationManager)
     }
 }
