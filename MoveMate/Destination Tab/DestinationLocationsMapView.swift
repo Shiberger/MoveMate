@@ -32,10 +32,12 @@ struct DestinationLocationsMapView: View {
                     .foregroundStyle(.primary)
             } label: {
                 Text("Name")
+                    
             }
             HStack {
                 Text("Adjust the map to set the region for your destination.")
                     .foregroundStyle(.secondary)
+                    .frame(maxWidth: 210)
                 Spacer()
                 Button("Set region") {
                     if let visibleRegion {
@@ -46,9 +48,10 @@ struct DestinationLocationsMapView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
+                .tint(.accentColor)
             }
         }
-        .padding(.horizontal)
+        .padding([.top, .leading, .trailing])
         MapReader { proxy in
             Map(position: $cameraPosition, selection: $selectedPlacemark) {
                 ForEach(listPlacemarks) { placemark in

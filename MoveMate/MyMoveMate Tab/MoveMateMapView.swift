@@ -62,6 +62,7 @@ struct MoveMateMapView: View {
                     .stroke(.blue, lineWidth: 6)
             }
         }
+        .frame(height: 720.0)
         .sheet(item: $selectedPlacemark) { selectedPlacemark in
             LocationDetailView(
                 selectedPlacemark: selectedPlacemark,
@@ -79,8 +80,9 @@ struct MoveMateMapView: View {
             updateCameraPosition()
         }
         .mapControls{
+
             MapScaleView()
-                .padding()
+                
         }
         .mapStyle(mapStyleConfig.mapStyle)
         .task(id: selectedPlacemark) {
@@ -177,7 +179,7 @@ struct MoveMateMapView: View {
                     }
                     .padding()
                     
-                    HStack {
+                    HStack(spacing: 30.0) {
                         if !searchPlacemarks.isEmpty {
                             Button {
                                 MapManager.removeSearchResults(modelContext)
@@ -195,7 +197,7 @@ struct MoveMateMapView: View {
                                 .foregroundColor(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353, opacity: 1))
                                 .imageScale(.large)
                         }
-                        .padding(8)
+                        .padding(8.0)
                         .background(.thickMaterial)
                         .clipShape(.circle)
                         .sheet(isPresented: $pickMapStyle) {
@@ -203,20 +205,19 @@ struct MoveMateMapView: View {
                                 .presentationDetents([.height(275)])
                         }
                         MapUserLocationButton(scope: mapScope)
+                            .tint(.accentColor)
                         MapCompass(scope: mapScope)
                             .mapControlVisibility(.visible)
                         MapPitchToggle(scope: mapScope)
+                            .tint(.accentColor)
                             .mapControlVisibility(.visible)
                     }
-                    .padding()
+                    .padding(.bottom, 200.0)
                     .buttonBorderShape(.circle)
                 }
             }
         }
-
         .cornerRadius(30)
-        .padding(.horizontal, 20.0)
-        .padding(.top, 80.0)
         .mapScope(mapScope)
     }
     

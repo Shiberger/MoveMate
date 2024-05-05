@@ -14,7 +14,8 @@ struct StartTab: View {
             Group {
                 MoveMateMapView()
                     .tabItem {
-                    Label("MoveMate Map", systemImage: "map")
+                        Label("MoveMate Map", systemImage: "map")
+                            
                 }
                 DestinationsListView()
                     .tabItem {
