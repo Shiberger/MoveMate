@@ -51,12 +51,13 @@ struct DestinationsListView: View {
                     )
                 }
             }
-            .navigationTitle("My Destinations")
+            .navigationTitle("Destinations")
             .toolbar {
                 Button {
                     newDestination.toggle()
                 } label: {
                     Image(systemName: "plus.circle.fill")
+                        .foregroundColor(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353, opacity: 1.0))
                 }
                 .alert(
                     "Enter Destination Name",

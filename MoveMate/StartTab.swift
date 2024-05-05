@@ -21,7 +21,7 @@ struct StartTab: View {
                         Label("Destinations", systemImage: "globe.desk")
                     }
             }
-            .toolbarBackground(.appBlue.opacity(0.8), for: .tabBar)
+            .toolbarBackground(Color(#colorLiteral(red: 0.109803922, green: 0.301960784, blue: 0.549019608, alpha: 1)).opacity(1), for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
             .toolbarColorScheme(.dark, for: .tabBar)
         }
