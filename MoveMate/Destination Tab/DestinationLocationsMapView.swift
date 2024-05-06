@@ -28,11 +28,14 @@ struct DestinationLocationsMapView: View {
         VStack {
             LabeledContent {
                 TextField("Enter destination name", text: $destination.name)
-                    .textFieldStyle(.roundedBorder)
-                    .foregroundStyle(.primary)
+                    .padding(.vertical,6)
+                    .padding(.horizontal)
+                    .background(Color.primary.opacity(0.05))
+                    .cornerRadius(8)
+                    
             } label: {
                 Text("Name")
-                    
+                    .fontWeight(.medium)
             }
             HStack {
                 Text("Adjust the map to set the region for your destination.")

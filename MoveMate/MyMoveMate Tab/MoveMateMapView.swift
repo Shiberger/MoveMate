@@ -108,12 +108,14 @@ struct MoveMateMapView: View {
             await fetchRoute()
         }
         .safeAreaInset(edge: .bottom) {
-            VStack {
+            HStack {
                 VStack {
-                    VStack {
+                    HStack(spacing: 15) {
                         TextField("Search...", text: $searchText)
                             .padding(.horizontal, 15.0)
-                            .textFieldStyle(.roundedBorder)
+                            .padding(.vertical, 10)
+                            .background(Color.primary.opacity(0.1))
+                            .cornerRadius(8)
                             .autocorrectionDisabled()
                             .textInputAutocapitalization(.never)
                             .focused($searchFieldFocus)
@@ -125,9 +127,10 @@ struct MoveMateMapView: View {
                                     } label: {
                                         Image(systemName: "xmark.circle.fill")
                                     }
-                                    .offset(x: -5)
+                                    .offset(x: -20)
                                 }
                             }
+
                             .onSubmit {
                                 Task {
                                     await MapManager.searchPlaces(
@@ -168,7 +171,7 @@ struct MoveMateMapView: View {
                                                     }
                                                 }
                                             }
-                                            .listStyle(.plain)
+                                                                                        .listStyle(.plain)
                                             .navigationTitle("Steps")
                                             .navigationBarTitleDisplayMode(.inline)
                                         }
@@ -193,7 +196,7 @@ struct MoveMateMapView: View {
                         Button {
                             pickMapStyle.toggle()
                         } label: {
-                            Image(systemName: "globe.americas.fill")
+                            Image(systemName: "gearshape")
                                 .foregroundColor(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353, opacity: 1))
                                 .imageScale(.large)
                         }
