@@ -124,6 +124,7 @@ struct DestinationLocationsMapView: View {
                 if !isManualMarker{
                     HStack {
                         TextField("Search...", text: $searchText)
+                            .padding(.horizontal, 10.0)
                             .textFieldStyle(.roundedBorder)
                             .autocorrectionDisabled()
                             .textInputAutocapitalization(.never)
