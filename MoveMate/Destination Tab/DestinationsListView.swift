@@ -22,6 +22,7 @@ struct DestinationsListView: View {
                         NavigationLink(value: destination){
                             HStack {
                                 Image(systemName: "globe")
+                                    .foregroundColor(Color("AccentColor"))
                                     .imageScale(.large)
                                     .foregroundStyle(.accent)
                                 VStack(alignment: .leading) {
@@ -51,12 +52,15 @@ struct DestinationsListView: View {
                     )
                 }
             }
-            .navigationTitle("My Destinations")
+            .navigationTitle("Destinations")
             .toolbar {
                 Button {
                     newDestination.toggle()
                 } label: {
                     Image(systemName: "plus.circle.fill")
+                        .foregroundColor(Color(red: 0.948, green: 0.549, blue: 0.056))
+                        .imageScale(.large)
+                        
                 }
                 .alert(
                     "Enter Destination Name",

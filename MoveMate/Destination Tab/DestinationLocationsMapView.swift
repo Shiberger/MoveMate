@@ -28,14 +28,19 @@ struct DestinationLocationsMapView: View {
         VStack {
             LabeledContent {
                 TextField("Enter destination name", text: $destination.name)
-                    .textFieldStyle(.roundedBorder)
-                    .foregroundStyle(.primary)
+                    .padding(.vertical,6)
+                    .padding(.horizontal)
+                    .background(Color.primary.opacity(0.05))
+                    .cornerRadius(8)
+                    
             } label: {
                 Text("Name")
+                    .fontWeight(.medium)
             }
             HStack {
                 Text("Adjust the map to set the region for your destination.")
                     .foregroundStyle(.secondary)
+                    .frame(maxWidth: 210)
                 Spacer()
                 Button("Set region") {
                     if let visibleRegion {
@@ -46,9 +51,10 @@ struct DestinationLocationsMapView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
+                .tint(.accentColor)
             }
         }
-        .padding(.horizontal)
+        .padding([.top, .leading, .trailing])
         MapReader { proxy in
             Map(position: $cameraPosition, selection: $selectedPlacemark) {
                 ForEach(listPlacemarks) { placemark in

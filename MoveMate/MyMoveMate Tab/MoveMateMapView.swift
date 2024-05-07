@@ -62,6 +62,7 @@ struct MoveMateMapView: View {
                     .stroke(.blue, lineWidth: 6)
             }
         }
+        .frame(height: 720.0)
         .sheet(item: $selectedPlacemark) { selectedPlacemark in
             LocationDetailView(
                 selectedPlacemark: selectedPlacemark,
@@ -79,7 +80,9 @@ struct MoveMateMapView: View {
             updateCameraPosition()
         }
         .mapControls{
+
             MapScaleView()
+                
         }
         .mapStyle(mapStyleConfig.mapStyle)
         .task(id: selectedPlacemark) {
@@ -107,105 +110,117 @@ struct MoveMateMapView: View {
         .safeAreaInset(edge: .bottom) {
             HStack {
                 VStack {
-                    TextField("Search...", text: $searchText)
-                        .textFieldStyle(.roundedBorder)
-                        .autocorrectionDisabled()
-                        .textInputAutocapitalization(.never)
-                        .focused($searchFieldFocus)
-                        .overlay(alignment: .trailing) {
-                            if searchFieldFocus {
-                                Button {
-                                    searchText = ""
-                                    searchFieldFocus = false
-                                } label: {
-                                    Image(systemName: "xmark.circle.fill")
+                    HStack(spacing: 15) {
+                        TextField("Search...", text: $searchText)
+                            .padding(.horizontal, 15.0)
+                            .padding(.vertical, 10)
+                            .background(Color.primary.opacity(0.1))
+                            .cornerRadius(8)
+                            .autocorrectionDisabled()
+                            .textInputAutocapitalization(.never)
+                            .focused($searchFieldFocus)
+                            .overlay(alignment: .trailing) {
+                                if searchFieldFocus {
+                                    Button {
+                                        searchText = ""
+                                        searchFieldFocus = false
+                                    } label: {
+                                        Image(systemName: "xmark.circle.fill")
+                                    }
+                                    .offset(x: -20)
                                 }
-                                .offset(x: -5)
                             }
-                        }
-                        .onSubmit {
-                            Task {
-                                await MapManager.searchPlaces(
-                                    modelContext,
-                                    searchText: searchText,
-                                    visibleRegion: visibleRegion
-                                )
-                                searchText = ""
+
+                            .onSubmit {
+                                Task {
+                                    await MapManager.searchPlaces(
+                                        modelContext,
+                                        searchText: searchText,
+                                        visibleRegion: visibleRegion
+                                    )
+                                    searchText = ""
+                                }
                             }
-                        }
-                    if routeDisplaying {
-                        HStack {
-                            Button("Clear Route", systemImage: "xmark.circle") {
-                                removeRoute()
-                            }
-                            .buttonStyle(.borderedProminent)
-                            .fixedSize(horizontal: true, vertical: false)
-                            Button("Show Steps", systemImage: "location.north") {
-                                showSteps.toggle()
-                            }
-                            .buttonStyle(.borderedProminent)
-                            .fixedSize(horizontal: true, vertical: false)
-                            .sheet(isPresented: $showSteps) {
-                                if let route {
-                                    NavigationStack {
-                                        List {
-                                            HStack {
-                                                Image(systemName: "mappin.circle.fill")
-                                                    .foregroundStyle(.red)
-                                                Text("From my location")
-                                                Spacer()
-                                            }
-                                            ForEach(1..<route.steps.count, id: \.self) { idx in
-                                                VStack(alignment: .leading) {
-                                                    Text("\(transportType == .automobile ? "Drive" : "Walk") \(MapManager.distance(meters: route.steps[idx].distance))")
-                                                        .bold()
-                                                    Text(" - \(route.steps[idx].instructions)")
+                        if routeDisplaying {
+                            HStack {
+                                Button("Clear Route", systemImage: "xmark.circle") {
+                                    removeRoute()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .fixedSize(horizontal: true, vertical: false)
+                                Button("Show Steps", systemImage: "location.north") {
+                                    showSteps.toggle()
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .fixedSize(horizontal: true, vertical: false)
+                                .sheet(isPresented: $showSteps) {
+                                    if let route {
+                                        NavigationStack {
+                                            List {
+                                                HStack {
+                                                    Image(systemName: "mappin.circle.fill")
+                                                        .foregroundStyle(.red)
+                                                    Text("From my location")
+                                                    Spacer()
+                                                }
+                                                ForEach(1..<route.steps.count, id: \.self) { idx in
+                                                    VStack(alignment: .leading) {
+                                                        Text("\(transportType == .automobile ? "Drive" : "Walk") \(MapManager.distance(meters: route.steps[idx].distance))")
+                                                            .bold()
+                                                        Text(" - \(route.steps[idx].instructions)")
+                                                    }
                                                 }
                                             }
+                                                                                        .listStyle(.plain)
+                                            .navigationTitle("Steps")
+                                            .navigationBarTitleDisplayMode(.inline)
                                         }
-                                        .listStyle(.plain)
-                                        .navigationTitle("Steps")
-                                        .navigationBarTitleDisplayMode(.inline)
                                     }
                                 }
                             }
                         }
                     }
-                }
-                .padding()
-                VStack {
-                    if !searchPlacemarks.isEmpty {
-                        Button {
-                            MapManager.removeSearchResults(modelContext)
-                        } label: {
-                            Image(systemName: "mappin.slash")
+                    .padding()
+                    
+                    HStack(spacing: 30.0) {
+                        if !searchPlacemarks.isEmpty {
+                            Button {
+                                MapManager.removeSearchResults(modelContext)
+                            } label: {
+                                Image(systemName: "mappin.slash")
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .tint(.red)
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.red)
+                        
+                        Button {
+                            pickMapStyle.toggle()
+                        } label: {
+                            Image(systemName: "gearshape")
+                                .foregroundColor(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353, opacity: 1))
+                                .imageScale(.large)
+                        }
+                        .padding(8.0)
+                        .background(.thickMaterial)
+                        .clipShape(.circle)
+                        .sheet(isPresented: $pickMapStyle) {
+                            MapStyleView(mapStyleConfig: $mapStyleConfig)
+                                .presentationDetents([.height(275)])
+                        }
+                        MapUserLocationButton(scope: mapScope)
+                            .tint(.accentColor)
+                        MapCompass(scope: mapScope)
+                            .mapControlVisibility(.visible)
+                        MapPitchToggle(scope: mapScope)
+                            .tint(.accentColor)
+                            .mapControlVisibility(.visible)
                     }
-                    Button {
-                        pickMapStyle.toggle()
-                    } label: {
-                        Image(systemName: "globe.americas.fill")
-                            .imageScale(.large)
-                    }
-                    .padding(8)
-                    .background(.thickMaterial)
-                    .clipShape(.circle)
-                    .sheet(isPresented: $pickMapStyle) {
-                        MapStyleView(mapStyleConfig: $mapStyleConfig)
-                            .presentationDetents([.height(275)])
-                    }
-                    MapUserLocationButton(scope: mapScope)
-                    MapCompass(scope: mapScope)
-                        .mapControlVisibility(.visible)
-                    MapPitchToggle(scope: mapScope)
-                        .mapControlVisibility(.visible)
+                    .padding(.bottom, 200.0)
+                    .buttonBorderShape(.circle)
                 }
-                .padding()
-                .buttonBorderShape(.circle)
             }
         }
+        .cornerRadius(30)
         .mapScope(mapScope)
     }
     

@@ -71,6 +71,7 @@ struct LocationDetailView: View {
                                 Image(systemName: "car")
                                     .symbolVariant(transportType == .automobile ? .circle : .none)
                                     .imageScale(.large)
+                                    .tint(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353))
                             }
                             Button {
                                 transportType = .walking
@@ -78,6 +79,7 @@ struct LocationDetailView: View {
                                 Image(systemName: "figure.walk")
                                     .symbolVariant(transportType == .walking ? .circle : .none)
                                     .imageScale(.large)
+                                    .tint(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353))
                             }
                             if let travelTime {
                                 let prefix = transportType == .automobile ? "Driving" : "Walking"
@@ -142,6 +144,7 @@ struct LocationDetailView: View {
                         .fixedSize(horizontal: true, vertical: false)
                     }
                     .buttonStyle(.bordered)
+                    .tint(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353))
                 }
             }
             Spacer()

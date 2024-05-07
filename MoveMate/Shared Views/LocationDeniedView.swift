@@ -32,6 +32,7 @@ struct LocationDeniedView: View {
                 Text("Open Settings")
             }
             .buttonStyle(.borderedProminent)
+            .tint(Color(red: 0.94901961, green: 0.54901961, blue: 0.05882353))
         })
     }
 }
